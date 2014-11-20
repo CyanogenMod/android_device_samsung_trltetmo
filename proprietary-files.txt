@@ -43,9 +43,11 @@ bin/qmuxd
 bin/rfs_access
 bin/rild
 bin/rmt_storage
+bin/rmnetcli
 lib/libmdmdetect.so
 lib/libreference-ril.so
 lib/libril.so
+lib/librmnetctl.so
 lib/libsec-ril.so
 lib/libsecnativefeature.so
 lib/libsecril-client.so
