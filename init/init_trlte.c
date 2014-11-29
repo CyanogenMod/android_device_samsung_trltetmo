@@ -56,26 +56,28 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
     if (strstr(bootloader, "N910W8")) {
         /* trltecan These values are taken from TMO and edited for the 910W8 FIXME */
-        property_set("ro.build.fingerprint", "samsung/trltevl/trltecan:4.4.4/KTU84P/N910W8UVU1ANIH:user/release-keys");
-        property_set("ro.build.description", "trltevl-user 4.4.4 KTU84P N910W8UVU1ANIH release-keys");
+        property_set("ro.build.fingerprint", "samsung/trltevl/trltecan:5.0/LRX21O/N910W8UVU1ANIH:user/release-keys");
+        property_set("ro.build.description", "trltevl-user 5.0 LRX21O N910W8UVU1ANIH release-keys");
         property_set("ro.product.model", "SM-N910W8");
         property_set("ro.product.device", "trltecan");
         gsm_properties();
     } else if (strstr(bootloader, "N910T")) {
         /* trltetmo */
-        property_set("ro.build.fingerprint", "samsung/trltetmo/trltetmo:4.4.4/KTU84P/N910TUVU1ANIH:user/release-keys");
-        property_set("ro.build.description", "trltetmo-user 4.4.4 KTU84P N910TUVU1ANIH release-keys");
+        property_set("ro.build.fingerprint", "samsung/trltetmo/trltetmo:5.0/LRX21O/N910TUVU1ANIH:user/release-keys");
+        property_set("ro.build.description", "trltetmo-user 5.0 LRX21O N910TUVU1ANIH release-keys");
         property_set("ro.product.model", "SM-N910T");
         property_set("ro.product.device", "trltetmo");
         gsm_properties();
     } else {
         /* trltexx These values are taken from TMO and edited for the 910F FIXME  */
-        property_set("ro.build.fingerprint", "samsung/trltexx/trlte:4.4.4/KTU84P/N910FUVU1ANIH:user/release-keys");
-        property_set("ro.build.description", "trltexx-user 4.4.4 KTU84P N910FUVU1ANIH release-keys");
+        property_set("ro.build.fingerprint", "samsung/trltexx/trlte:5.0/LRX21O/N910FUVU1ANIH:user/release-keys");
+        property_set("ro.build.description", "trltexx-user 5.0 LRX21O N910FUVU1ANIH release-keys");
         property_set("ro.product.model", "SM-N910F");
         property_set("ro.product.device", "trltexx");
         gsm_properties();
     }
+
+    property_set("fingerprint_enabled", "1");
 
     property_get("ro.product.device", device);
     strlcpy(devicename, device, sizeof(devicename));
