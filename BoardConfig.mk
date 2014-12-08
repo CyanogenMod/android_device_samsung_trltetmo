@@ -15,18 +15,18 @@
 # inherit from common trlte
 -include device/samsung/trlte-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := trltexx,trltetmo,trltecan,trlte
+TARGET_OTA_ASSERT_DEVICE := trltetmo,trltecan
 
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := apq8084_sec_trlte_tmo_defconfig
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := device/samsung/trlte/init/init_trlte.c
+TARGET_LIBINIT_DEFINES_FILE := device/samsung/trltetmo/init/init_trlte.c
 TARGET_UNIFIED_DEVICE := true
 
 # Radio
-BOARD_RIL_CLASS := ../../../device/samsung/trlte/ril
+BOARD_RIL_CLASS := ../../../device/samsung/trltetmo/ril
 
 # inherit from the proprietary version
--include vendor/samsung/trlte/BoardConfigVendor.mk
+-include vendor/samsung/trltetmo/BoardConfigVendor.mk

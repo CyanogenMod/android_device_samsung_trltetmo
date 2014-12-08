@@ -34,7 +34,7 @@ import java.util.Collections;
  *
  * {@hide}
  */
-public class TrlteRIL extends RIL {
+public class trlteRIL extends RIL {
 
     private static final int RIL_REQUEST_DIAL_EMERGENCY = 10016;
     private static final int RIL_UNSOL_DEVICE_READY_NOTI = 11008;
@@ -43,12 +43,12 @@ public class TrlteRIL extends RIL {
     private static final int RIL_UNSOL_SRVCC_HANDOVER = 11029;
     private static final int RIL_REQUEST_ACTIVATE_DATA_CALL = 11037;
 
-    public TrlteRIL(Context context, int preferredNetworkType,
+    public trlteRIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
         this(context, preferredNetworkType, cdmaSubscription);
 	}
 
-    public TrlteRIL(Context context, int networkMode, int cdmaSubscription) {
+    public trlteRIL(Context context, int networkMode, int cdmaSubscription) {
         super(context, networkMode, cdmaSubscription);
         mQANElements = 6;
     }
