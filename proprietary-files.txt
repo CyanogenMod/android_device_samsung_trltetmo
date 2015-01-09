@@ -4,13 +4,6 @@ vendor/firmware/bcm43569.hcd
 vendor/firmware/bcm43569A0.hcd
 vendor/firmware/bcm43569A1.hcd
 
-# Keymaster firmware
-vendor/firmware/keymaster/keymaster.mdt:system/vendor/firmware/keymaster/keymaster.mdt
-vendor/firmware/keymaster/keymaster.b00:system/vendor/firmware/keymaster/keymaster.b00
-vendor/firmware/keymaster/keymaster.b01:system/vendor/firmware/keymaster/keymaster.b01
-vendor/firmware/keymaster/keymaster.b02:system/vendor/firmware/keymaster/keymaster.b02
-vendor/firmware/keymaster/keymaster.b03:system/vendor/firmware/keymaster/keymaster.b03
-
 # GPS
 -app/com.qualcomm.location.apk
 bin/gsiff_daemon
