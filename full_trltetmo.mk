@@ -23,4 +23,4 @@ PRODUCT_NAME := full_trltetmo
 PRODUCT_DEVICE := trltetmo
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SM-N910T
+PRODUCT_MODEL := trltetmo
