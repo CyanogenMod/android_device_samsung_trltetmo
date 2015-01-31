@@ -1,2 +1,2 @@
-add_lunch_combo cm_trltetmo-eng
+add_lunch_combo cm_trlteeur-eng
 
