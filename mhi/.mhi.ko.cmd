@@ -1,1 +1,0 @@
-cmd_/home/allard/android/system/hardware/qcom/mhi/mhi.ko := /opt/toolchains/arm-eabi-4.7/bin/arm-eabi-ld -EL -r  -T /home/allard/android/system/kernel/samsung/trlte/scripts/module-common.lds --build-id  -o /home/allard/android/system/hardware/qcom/mhi/mhi.ko /home/allard/android/system/hardware/qcom/mhi/mhi.o /home/allard/android/system/hardware/qcom/mhi/mhi.mod.o
