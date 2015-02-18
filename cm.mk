@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/samsung/trlteeur/full_trlteeur.mk)
+$(call inherit-product, device/samsung/trltexx/full_trltexx.mk)
 
 # Enhanced NFC
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
@@ -22,5 +22,5 @@ $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 # Inherit common CM phone.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_DEVICE := trlteeur
-PRODUCT_NAME := cm_trlteeur
+PRODUCT_DEVICE := trltexx
+PRODUCT_NAME := cm_trltexx

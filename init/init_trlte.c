@@ -53,11 +53,11 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         return;
 
     property_get("ro.bootloader", bootloader);
-    /* trlteeur */
-    property_set("ro.build.fingerprint", "samsung/trlteeur/trlteeur:5.0.2/LRX22G/N910TUVU1ANIH:user/release-keys");
-    property_set("ro.build.description", "trlteeur-user 5.0.2 LRX22G N910TUVU1ANIH release-keys");
+    /* trltexx */
+    property_set("ro.build.fingerprint", "samsung/trltexx/trltexx:5.0.2/LRX22G/N910TUVU1ANIH:user/release-keys");
+    property_set("ro.build.description", "trltexx-user 5.0.2 LRX22G N910TUVU1ANIH release-keys");
     property_set("ro.product.model", "SM-N910F");
-    property_set("ro.product.device", "trlteeur");
+    property_set("ro.product.device", "trltexx");
     gsm_properties();
     
 
