@@ -12,21 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from common trlte
--include device/samsung/trlte-common/BoardConfigCommon.mk
+# inherit from common lentislte
+-include device/samsung/lentislte-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := trltetmo,trltecan
+TARGET_OTA_ASSERT_DEVICE := lentisltelgt,lentislteskt
 
 # Kernel
-TARGET_KERNEL_VARIANT_CONFIG := apq8084_sec_trlte_tmo_defconfig
-
+TARGET_KERNEL_VARIANT_CONFIG := apq8084_sec_lentislte_tmo_defconfig
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_VARIANT := krait
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := device/samsung/trltetmo/init/init_trlte.c
+TARGET_LIBINIT_DEFINES_FILE := device/samsung/lentisltelgt/init/init_lentislte.c
 TARGET_UNIFIED_DEVICE := true
 
 # Radio
-BOARD_RIL_CLASS := ../../../device/samsung/trltetmo/ril
+BOARD_RIL_CLASS := ../../../device/samsung/lentisltelgt/ril
 
 # inherit from the proprietary version
--include vendor/samsung/trltetmo/BoardConfigVendor.mk
+-include vendor/samsung/lentisltelgt/BoardConfigVendor.mk
