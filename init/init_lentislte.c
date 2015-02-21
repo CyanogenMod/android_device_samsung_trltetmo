@@ -54,19 +54,19 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
     property_get("ro.bootloader", bootloader);
 
-    if (strstr(bootloader, "N910W8")) {
+    if (strstr(bootloader, "G906L")) {
         /* trltecan These values are taken from TMO and edited for the 910W8 FIXME */
-        property_set("ro.build.fingerprint", "samsung/trltevl/trltecan:5.0.2/LRX22G/N910W8UVU1ANIH:user/release-keys");
-        property_set("ro.build.description", "trltevl-user 5.0.2 LRX22G N910W8UVU1ANIH release-keys");
-        property_set("ro.product.model", "SM-N910W8");
-        property_set("ro.product.device", "trltecan");
+        property_set("ro.build.fingerprint", "samsung/lentislteskt/lentislteskt:5.0.2/LRX22G/G906SSKC1ANK1:user/release-keys");
+        property_set("ro.build.description", "lentislteskt-user 5.0.2 LRX22G G906SSKC1ANK1 release-keys");
+        property_set("ro.product.model", "SM-G906S");
+        property_set("ro.product.device", "lentislteskt");
         gsm_properties();
     } else {
         /* trltetmo */
-        property_set("ro.build.fingerprint", "samsung/trltetmo/trltetmo:5.0.2/LRX22G/N910TUVU1ANIH:user/release-keys");
-        property_set("ro.build.description", "trltetmo-user 5.0.2 LRX22G N910TUVU1ANIH release-keys");
-        property_set("ro.product.model", "SM-N910T");
-        property_set("ro.product.device", "trltetmo");
+        property_set("ro.build.fingerprint", "samsung/lentisltelgt/lentisltelgt:5.0.2/LRX22G/G906LKLU1ANK1:user/release-keys");
+        property_set("ro.build.description", "lentisltelgt-user 5.0.2 LRX22G G906LKLU1ANK1 release-keys");
+        property_set("ro.product.model", "SM-G906L");
+        property_set("ro.product.device", "lentisltelgt");
         gsm_properties();
     }
 

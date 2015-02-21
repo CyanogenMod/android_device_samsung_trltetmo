@@ -1,6 +1,6 @@
 [
   {
-    "repository": "android_device_samsung_trlte-common",
-    "target_path": "device/samsung/trlte-common"
+    "repository": "android_device_samsung_lentislte-common",
+    "target_path": "device/samsung/lentislte-common"
   }
 ]
