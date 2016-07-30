@@ -34,8 +34,9 @@
 #include "property_service.h"
 #include "log.h"
 #include "util.h"
+#include <sys/system_properties.h>
 
-#include "init_msm.h"
+#define ISMATCH(a,b)    (!strncmp(a,b,PROP_VALUE_MAX))
 
 void gsm_properties()
 {
@@ -43,17 +44,12 @@ void gsm_properties()
     property_set("ro.telephony.default_network", "9");
 }
 
-void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
-{
+void init_variant_properties() {
     char platform[PROP_VALUE_MAX];
     char bootloader[PROP_VALUE_MAX];
     char device[PROP_VALUE_MAX];
     char devicename[PROP_VALUE_MAX];
     int rc;
-
-    UNUSED(msm_id);
-    UNUSED(msm_ver);
-    UNUSED(board_type);
 
     rc = property_get("ro.board.platform", platform);
     if (!rc || !ISMATCH(platform, ANDROID_TARGET))
@@ -63,15 +59,15 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
     if (strstr(bootloader, "N910W8")) {
         /* trltecan These values are taken from TMO and edited for the 910W8 FIXME */
-        property_set("ro.build.fingerprint", "samsung/trltevl/trltecan:6.0/MRA58K/N910W8UVU1ANIH:user/release-keys");
-        property_set("ro.build.description", "trltevl-user 6.0 MRA58K N910W8UVU1ANIH release-keys");
+        property_set("ro.build.fingerprint", "samsung/trltevl/trltecan:6.0.1/MRA58K/N910TUVU2EPE3:user/release-keys");
+        property_set("ro.build.description", "trltevl-user 6.0.1 MRA58K N910TUVU2EPE3 release-keys");
         property_set("ro.product.model", "SM-N910W8");
         property_set("ro.product.device", "trltecan");
         gsm_properties();
     } else {
         /* trltetmo */
-        property_set("ro.build.fingerprint", "samsung/trltetmo/trltetmo:6.0/MRA58K/N910TUVU1ANIH:user/release-keys");
-        property_set("ro.build.description", "trltetmo-user 6.0 MRA58K N910TUVU1ANIH release-keys");
+        property_set("ro.build.fingerprint", "samsung/trltetmo/trltetmo:6.0.1/MRA58K/N910TUVU2EPE3:user/release-keys");
+        property_set("ro.build.description", "trltetmo-user 6.0.1 MRA58K N910TUVU2EPE3 release-keys");
         property_set("ro.product.model", "SM-N910T");
         property_set("ro.product.device", "trltetmo");
         gsm_properties();
@@ -80,4 +76,9 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     property_get("ro.product.device", device);
     strlcpy(devicename, device, sizeof(devicename));
     INFO("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
+}
+
+
+void vendor_load_properties() {
+    init_variant_properties();
 }
